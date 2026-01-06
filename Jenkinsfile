@@ -1,6 +1,6 @@
 pipeline{
     // agent {label 'sonar'}
-    agent any
+    agent (label 'jfrog')
     stages{
        /*stage('Git Checkout Stage'){
             steps{
