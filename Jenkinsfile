@@ -1,6 +1,6 @@
 pipeline{
     // agent {label 'sonar'}
-    agent none
+    agent any
     stages{
        /*stage('Git Checkout Stage'){
             steps{
@@ -9,7 +9,7 @@ pipeline{
          }*/       
        stage('Build Stage'){
             steps{
-                agent (label 'jfrog')
+               // agent (label 'jfrog')
                 sh 'mvn clean install'
             }
          }
