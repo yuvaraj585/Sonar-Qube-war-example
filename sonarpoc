@@ -14,7 +14,7 @@ pipeline {
                 script {
                     def mvn = tool 'maven' 
                     
-                    withSonarQubeEnv('Sonar') {
+                    withSonarQubeEnv('SonarQube') {
                         sh """
                         ${mvn}/bin/mvn clean verify \
                         org.sonarsource.scanner.maven:sonar-maven-plugin:sonar \
